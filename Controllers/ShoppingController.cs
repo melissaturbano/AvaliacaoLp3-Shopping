@@ -19,6 +19,11 @@ public class ShoppingController : Controller
         return View(lojas);
     }
 
+    public IActionResult Gerenciamento() //lista dos estudantes
+    {
+        return View(lojas);
+    }
+
     public IActionResult Show(int id) //mostra detalhe dos estudantes
     {
         return View(lojas[id-1]);
