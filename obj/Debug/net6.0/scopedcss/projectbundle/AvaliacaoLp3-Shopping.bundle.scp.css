@@ -1,0 +1,49 @@
+/* _content/AvaliacaoLp3-Shopping/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-car9s9ssdt] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-car9s9ssdt] {
+  color: #0077cc;
+}
+
+.btn-primary[b-car9s9ssdt] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-car9s9ssdt], .nav-pills .show > .nav-link[b-car9s9ssdt] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-car9s9ssdt] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-car9s9ssdt] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-car9s9ssdt] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-car9s9ssdt] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-car9s9ssdt] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
