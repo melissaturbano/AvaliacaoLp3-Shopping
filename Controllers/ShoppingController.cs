@@ -45,7 +45,7 @@ public class ShoppingController : Controller
             }
         }       
 
-        LojaViewModel cadastro = new LojaViewModel(/*lojas.Count()*/id, piso, nome, descricao, tipo, email);
+        LojaViewModel cadastro = new LojaViewModel(id, piso, nome, descricao, tipo, email);
         lojas.Add(cadastro);
 
         return View("Cadastro");
