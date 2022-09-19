@@ -4,8 +4,11 @@
 
     <h1>Cadastre aqui a loja/kiosque:</h1>
     <hr>
-    <form action="CadastrarLoja" method="post">
+    <form action="Cadastro" method="post">
 
+
+        <label for="id">Id</label>
+        <input type="number" name="id" id="id" class="form-control" required>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" class="form-control" required>
 
@@ -32,6 +35,7 @@
         <label for="descricao">Descrição</label>
         <textarea class="form-control" name="descricao" id="descricao" cols="30" rows="5"></textarea>
 
-        <button type="submit">Enviar</button>
+        @*<button type="submit">Enviar</button>*@
+        <button type="submit" id="cadastro">Cadastrar</button>
     </form>
 </div>

@@ -22,12 +22,20 @@ public class ShoppingController : Controller
     //detalhe de cada loja
     public IActionResult Detalhe(int id){       
 
-        return View(lojas[id]);
+        //return View(lojas[id]);
 
+        foreach(var loja in lojas)
+        {
+            if(loja.Id == id)
+            {
+               return View(loja);
+            }
+        }
+        return View();
     }
 
     //cadastra loja
-    public IActionResult CadastrarLoja([FromForm] string nome, [FromForm] string email, [FromForm] string tipo, [FromForm] string descricao, [FromForm] int piso){
+    public IActionResult Cadastro([FromForm] int id, [FromForm] string nome, [FromForm] string email, [FromForm] string tipo, [FromForm] string descricao, [FromForm] int piso){
 
         foreach (var loja in lojas)
         {
@@ -37,12 +45,13 @@ public class ShoppingController : Controller
             }
         }       
 
-        LojaViewModel cadastro = new LojaViewModel(lojas.Count(), piso, nome, descricao, tipo, email);
+        LojaViewModel cadastro = new LojaViewModel(/*lojas.Count()*/id, piso, nome, descricao, tipo, email);
         lojas.Add(cadastro);
 
-        return View("CadastrarLoja");
+        return View("Cadastro");
 
     }
+
 
     //remove loja
     public IActionResult Remover(int id)
@@ -59,5 +68,6 @@ public class ShoppingController : Controller
 
         return View();
     }
+
 
 }
