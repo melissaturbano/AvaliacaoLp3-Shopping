@@ -6,8 +6,8 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = AvaliacaoLp3_Shopping
-build_property.RootNamespace = AvaliacaoLp3_Shopping
+build_property.RootNamespace = AvaliacaoLp3-Shopping
+build_property.RootNamespace = AvaliacaoLp3-Shopping
 build_property.ProjectDir = C:\Users\jrald\Desktop\AvaliacaoLp3-Shopping\AvaliacaoLp3-Shopping\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -31,12 +31,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jrald/Desktop/AvaliacaoLp3-Shopping/AvaliacaoLp3-Shopping/Views/Shopping/CadastrarLoja.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdcQ2FkYXN0cmFyTG9qYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jrald/Desktop/AvaliacaoLp3-Shopping/AvaliacaoLp3-Shopping/Views/Shopping/Detalhe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdcRGV0YWxoZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jrald/Desktop/AvaliacaoLp3-Shopping/AvaliacaoLp3-Shopping/Views/Shopping/Gerenciamento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdcR2VyZW5jaWFtZW50by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jrald/Desktop/AvaliacaoLp3-Shopping/AvaliacaoLp3-Shopping/Views/Shopping/ListaLojKio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdcTGlzdGFMb2pLaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jrald/Desktop/AvaliacaoLp3-Shopping/AvaliacaoLp3-Shopping/Views/Shopping/Remover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdcUmVtb3Zlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jrald/Desktop/AvaliacaoLp3-Shopping/AvaliacaoLp3-Shopping/Views/_ViewImports.cshtml]

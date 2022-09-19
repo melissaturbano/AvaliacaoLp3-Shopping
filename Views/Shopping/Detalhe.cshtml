@@ -1,0 +1,18 @@
+@*@model AvaliacaoLp3_Shopping.ViewModels.LojaViewModel;*@
+@{
+    ViewData["Title"] = "Detalhes: ";
+}
+
+<h3>@Model.Nome</h3>
+<hr>
+<p>Id: @Model.Id</p>
+<p>Piso: @Model.Piso</p>
+<p>Tipo: @Model.Tipo</p>
+<p>Descrição: @Model.Descrição</p>
+<p>Email: @Model.Email</p>
+
+
+
+<form action="/Shopping/Remover/@Model.Id">
+    <button type="submit">Deletar</button>
+</form>

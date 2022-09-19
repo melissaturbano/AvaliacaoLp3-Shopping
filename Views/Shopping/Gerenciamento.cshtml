@@ -1,13 +1,15 @@
 @model List<AvaliacaoLp3_Shopping.ViewModels.LojaViewModel>
 @{
-    ViewData["Title"] = "Lojas";
+    ViewData["Title"] = "Administrador";
 }
 
 
 @if(Model.Count == 0) 
 {
     <p>Nenhuma loja cadastrada</p>
-    <button>Cadastrar loja</button>
+    <form action="CadastrarLoja">
+            <button>Cadastrar loja</button>
+    </form>
 }
 else 
 {
@@ -17,22 +19,15 @@ else
     @*percorrendo e exibindo a lista*@
     @foreach(var loja in Model)
     {
-        <h3>
-            <a href="/Gerenciamento/Show/@loja.Id">@loja.Nome</a>   
-        </h3>
-
-        <p>@loja.Piso</p>
-        
-
-        @if(loja.Loja == true)
-        {
-            <p>Loja</p>
-            <button>Detalhes</button>
-        } else {
-            <p>Kiosque</p>
-            <button>Detalhes</button>
-        }
+       
+        <h3>@loja.Nome</h3>
+        <p>Piso: @loja.Piso</p>
+        <a href="/Shopping/Detalhe/@loja.Id">
+            <button>Detalhe</button>
+        </a>
         
         <hr>
+
     }
+
 }

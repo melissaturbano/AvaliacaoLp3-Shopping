@@ -1,32 +1,63 @@
 using Microsoft.AspNetCore.Mvc;
+using AvaliacaoLp3_Shopping.Models;
 using AvaliacaoLp3_Shopping.ViewModels;
 
 namespace AvaliacaoLp3_Shopping.Controllers;
 
 public class ShoppingController : Controller 
 {
-    //add estudantes a lista, já que nao temos bdd 
-    //private static List<EstudanteViewModel> estudantes = new List<EstudanteViewModel>();
-    private static List<LojaViewModel> lojas = 
-        new List<LojaViewModel> {
-            new LojaViewModel(1, "piso 01", "Sorvetinho gelado", "Sorvetinho gelado", false, "sorvet@email.com"),
-            new LojaViewModel(2, "piso 02", "Lembranças Já", "Vem comprar sua lembrança", true, "lembranca@email.com"),
-            new LojaViewModel(3, "piso 03", "Tênis Brasil", "Aqui você encontra tênis", true, "tenis@email.com")
-        };
+    //add lojas a lista, já que nao temos bdd 
+    private static List<LojaViewModel> lojas = new List<LojaViewModel>();
 
-    public IActionResult ListaLojKio() //lista dos estudantes
+    public IActionResult ListaLojKio() //lista do cliente
     {
         return View(lojas);
     }
 
-    public IActionResult Gerenciamento() //lista dos estudantes
+    public IActionResult Gerenciamento() //lista do adm
     {
         return View(lojas);
     }
 
-    public IActionResult Show(int id) //mostra detalhe dos estudantes
+    //detalhe de cada loja
+    public IActionResult Detalhe(int id){       
+
+        return View(lojas[id]);
+
+    }
+
+    //cadastra loja
+    public IActionResult CadastrarLoja([FromForm] string nome, [FromForm] string email, [FromForm] string tipo, [FromForm] string descricao, [FromForm] int piso){
+
+        foreach (var loja in lojas)
+        {
+            if(nome == loja.Nome){
+                ViewData["Nome"] = nome;
+                return View();
+            }
+        }       
+
+        LojaViewModel cadastro = new LojaViewModel(lojas.Count(), piso, nome, descricao, tipo, email);
+        lojas.Add(cadastro);
+
+        return View("CadastrarLoja");
+
+    }
+
+    //remove loja
+    public IActionResult Remover(int id)
     {
-        return View(lojas[id-1]);
+        foreach(var loja in lojas)
+        {
+            if(loja.Id == id)
+            {
+               lojas.Remove(loja);
+               ViewData ["Nome"] = loja.Nome;
+               return View();
+            }
+        }
+
+        return View();
     }
 
 }
