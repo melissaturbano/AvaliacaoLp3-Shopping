@@ -34,21 +34,26 @@ public class ShoppingController : Controller
         return View();
     }
 
+/*alterações feitas depois da consulta em aula com o professor corrigindo as falhas de validação*/
     //cadastra loja
     public IActionResult Cadastro([FromForm] int id, [FromForm] string nome, [FromForm] string email, [FromForm] string tipo, [FromForm] string descricao, [FromForm] int piso){
 
         foreach (var loja in lojas)
         {
-            if(nome == loja.Nome){
-                ViewData["Nome"] = nome;
-                return View();
+
+            if(loja.Nome.Equals(nome))
+            {
+                ViewData ["Nome"] = loja.Nome;
+                return View("Mensagem");
             }
-        }       
+        }
 
-        LojaViewModel cadastro = new LojaViewModel(id, piso, nome, descricao, tipo, email);
-        lojas.Add(cadastro);
+        if(id != 0)
+        { 
+            lojas.Add(new LojaViewModel(id, piso, nome, descricao, tipo, email));
+        } 
 
-        return View("Cadastro");
+        return View() ;
 
     }
 
